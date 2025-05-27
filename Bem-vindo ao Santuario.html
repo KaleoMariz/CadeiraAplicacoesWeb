@@ -1,19 +1,118 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title> O Santuário De Athena</title>
- 
-<style>
-  footer{
-    display: flex;
-    flex-direction: row;
-  }
- 
+  <meta charset="UTF-8">
+  <title>O Santuário De Athena</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #000428, #004e92); /* cosmos */
+      color: #e0e0e0; /* texto claro */
+    }
 
-</style>
+    h1, h2 {
+      color: gold;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: white;
+      text-shadow: 0 0 5px gold;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      width: 600px;
+      height: 300px;
+      margin: 30px auto;
+      overflow: hidden;
+      border: 2px solid silver;
+      border-radius: 10px;
+      box-shadow: 0 0 15px gold;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    section {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid gold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: gold;
+      color: #000428;
+    }
+  </style>
 </head>
 
 <body>
+
+
+<div class="slideshow-container">
+  <div class="slide active">
+    <img src="athena157.jpg" alt="Imagem 1">
+  </div>
+  <div class="slide">
+    <img src="estatua_athena_longe.jpg" alt="Imagem 2">
+  </div>
+  <div class="slide">
+    <img src="athenadelado.jpg" alt="Imagem 3">
+  </div>
+</div>
+
 <header>
+<<<<<<< HEAD
 
 
 <img src="imagens_CDZ/estatua_athena_III.jpg" align="left" style="width:200px; padding-top: 100px">
@@ -33,39 +132,40 @@
 </p>
 </div>
 
+=======
+  <div>
+    <h1>Bem-vindo ao Santuário de Atena</h1>
+    <p>
+      Aqui é o lugar onde vocês saberão as informações sobre os valorosos guerreiros de Athena. Guerreiros que por gerações defenderam a humanidade contra as forças de deuses vingativos que queriam destruir a raça humana.  
+      Aqui vocês encontrarão a informação sobre as guerras antigas travadas na era mitológica, e sobre quem são os guerreiros de Athena conhecidos como <b>cavaleiros</b>.
+    </p>
+  </div>
+>>>>>>> e7f561e8b85e017d2b6c2ba28691dafd63741b9c
 </header>
 
-
 <section>
-<h2> Para maiores informações, clique abaixo em uma das sessões de nossa página.</h2>
-<nav style="text-align: center;">
-  <a href="A_deusa_athena.html">A quem e que servimos</a><br>
-  <a href="Cavaleiros.html">Cavaleiros</a><br>
-  <a href="armaduras.html">Armaduras</a><br>  
-  <a href="">História do Santuário</a><br>  
-</nav>
-
-
+  <h2>Para maiores informações, clique abaixo em uma das sessões de nossa página.</h2>
+  <nav>
+    <a href="A_deusa_athena.html">A quem e que servimos</a>
+    <a href="Cavaleiros.html">Cavaleiros</a>
+    <a href="armaduras.html">Armaduras</a>
+    <a href="#">História do Santuário</a>
+  </nav>
 </section>
 
 
-<footer>
-   <div style=" margin: auto; width: 40%">
-    
-    <img src="imagens_CDZ/shion_de_aries.webp" width="100px" >
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
 
-   </div>
+  function showSlides() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+  }
 
-   <div style=" margin: auto; width: 60%">
-    <img src="imagens_CDZ/santuario II.jpg">
-   </div>
-
-   <div>
-    <img src="imagens_CDZ/sage_de_cancer.webp" style="padding-left: 80px; width: 145px">
-
-   </div>
-</footer>
-
+  setInterval(showSlides, 4000);
+</script>
 
 </body>
 </html>
